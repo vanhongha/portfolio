@@ -1,0 +1,40 @@
+.about-card{
+	position: absolute;
+
+}
+
+.about-card .header{
+	height: 68px;
+	border-radius: inherit;
+	position: relative;
+	padding: 0 20px;
+}
+
+.about-card .body{
+	min-height: 100px;
+	padding-bottom: 20px;
+}
+
+.about-card.info{
+	min-width: 350px;
+	top: 160px;
+}
+
+.three-dot-left{
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.title-right{
+	float: right;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 42px;
+}

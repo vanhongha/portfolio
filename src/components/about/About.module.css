@@ -1,0 +1,8 @@
+.background{
+	height: 60vh;
+	position: absolute;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+}
