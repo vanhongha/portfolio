@@ -5,8 +5,9 @@ import ThreeDot from "../UI/ThreeDot";
 import classes from "./AboutCard.module.css";
 
 const AboutCard = (props) => {
+	const clearFix = props.clearfix??false;
 	return (
-		<Card className={`${classes["about-card"]} ${classes[`${props.className}`]}`}>
+		<Card className={`${classes["about-card"]} ${classes[`${props.className}`]} ${clearFix ? classes.clearfix : ""}`}>
 			<div className={classes.header}>
 				<ThreeDot className={classes["three-dot-left"]} />
 				<div className={classes["title-right"]}>

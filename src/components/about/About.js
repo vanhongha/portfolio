@@ -59,7 +59,7 @@ const About = () => {
 	);
 
 	return (
-		<>
+		<div className={classes.container}>
 			{ReactDOM.createPortal(<AboutBG/>, root)}
 			<AboutCard
 				className={"info"}
@@ -74,9 +74,10 @@ const About = () => {
 			<AboutCard
 				className={"about-me"}
 				cardTitle={"About me"}
+				clearfix={true}
 				data={aboutMeData}
 			/>
-		</>
+		</div>
 	);
 }
 

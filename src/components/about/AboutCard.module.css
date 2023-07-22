@@ -1,5 +1,5 @@
 .about-card{
-	position: absolute;
+	position: relative;
 }
 
 .about-card .header{
@@ -21,15 +21,25 @@
 
 .about-card.contact{
 	width: 350px;
-	top: 370px;
+	top: 145px;
 	margin-left: 120px;
 }
 
 .about-card.about-me{
 	width: 550px;
-	top: 200px;
-	left: 50vw;
+	top: -200px;
+	float: right;
 }
+
+.clearfix:before,
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */
 
 .three-dot-left{
 	float: left;

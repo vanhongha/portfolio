@@ -5,7 +5,7 @@ import commonClasses from "../../utils/common.module.css"
 
 const Card = (props) => {
 	return (
-		<div className={`${classes.card} ${commonClasses.shadow} ${props.className}`}>
+		<div className={`${classes.card} ${commonClasses.shadow} ${props.className}`} style={props.style}>
 			{props.children}
 		</div>
 	)
