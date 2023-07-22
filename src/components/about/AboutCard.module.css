@@ -1,6 +1,5 @@
 .about-card{
 	position: absolute;
-
 }
 
 .about-card .header{
@@ -16,8 +15,20 @@
 }
 
 .about-card.info{
-	min-width: 350px;
+	width: 350px;
 	top: 160px;
+}
+
+.about-card.contact{
+	width: 350px;
+	top: 370px;
+	margin-left: 120px;
+}
+
+.about-card.about-me{
+	width: 550px;
+	top: 200px;
+	left: 50vw;
 }
 
 .three-dot-left{
