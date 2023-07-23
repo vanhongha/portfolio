@@ -4,7 +4,8 @@
 
 .education{
 	position: relative;
-	padding: 55px 10px;
+	margin-top: 100px;
+	padding: 99px 10px;
 }
 
 .university{
@@ -21,7 +22,7 @@
 }
 
 .period{
-	line-height: 30px;
+	line-height: 45px;
 }
 
 .university-name{
@@ -33,6 +34,7 @@
 .university-name-sub{
 	font-size: large;
 	font-weight: bold;
+	line-height: 40px;
 }
 
 .major{
@@ -48,8 +50,18 @@
 
 .middle{
 	position: absolute;
+	width: 100%;
 	left: 50%;
 	top: 50%;
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
+}
+
+.middle a{
+	color: white;
+	text-decoration: none;
+}
+
+.middle a:hover{
+	text-decoration: underline;
 }
