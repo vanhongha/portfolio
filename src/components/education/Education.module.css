@@ -4,24 +4,24 @@
 
 .education{
 	position: relative;
-	padding: 30px 10px;
+	padding: 55px 10px;
 }
 
 .university{
 	position: absolute;
-	text-align: left;
+	text-align: center;
 	padding-left: 60px;
 	height: 100%;
 	background-color: #3d5afe;
 	top: 0;
 	right: 0;
 	border-radius: 100px;
-	width: 453px;
+	width: calc(100% - 570px);
 	color: #ffffff;
 }
 
 .period{
-	line-height: 45px;
+	line-height: 30px;
 }
 
 .university-name{
@@ -40,9 +40,16 @@
 }
 
 .vertical-center {
-	margin: 0;
 	position: absolute;
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+}
+
+.middle{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }

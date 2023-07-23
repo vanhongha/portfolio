@@ -1,0 +1,14 @@
+.skill-tag{
+	display: inline-block;
+	border: solid 1px #000000;
+	padding: 10px;
+	border-radius: 25px;
+	margin: 5px;
+	cursor: default;
+}
+
+.skill-tag:hover{
+	background-color: #3852e7;
+	color: #ffffff;
+	border-color: #ffffff;
+}

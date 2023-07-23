@@ -1,0 +1,47 @@
+.skills-text-card{
+	float: right;
+	height: 420px;
+	width: 150px;
+	position: relative;
+	display: inline-block;
+	background-color: #ecefff;
+}
+
+.skills-text{
+	transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.skills-content-card{
+	width: calc(100% - 170px);
+	height: 420px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.left-panel{
+	position: relative;
+	background-color: #3852e7;
+	height: 100%;
+	width: 140px;
+	float: left;
+}
+
+.skills-content{
+	display: inline-block;
+	float: left;
+	padding-top: 30px;
+	padding-left: 30px;
+	height: 100%;
+	text-align: left;
+}
+
+.skills-title{
+	font-size: 20pt;
+	font-weight: bold;
+	cursor: default;
+}

@@ -12,7 +12,7 @@ const Education = () => {
 				EDUCATION
 			</Title>
 			<Card className={classes.university}>
-				<div className={classes["vertical-center"]}>
+				<div className={classes["middle"]}>
 					<div className={classes.period}>08/2014 - 09/2019</div>
 					<a style={{color: "white", textDecoration: "none"}} href={"https://en.uit.edu.vn/"} target="_blank">
 						<div className={classes["university-name"]}>
