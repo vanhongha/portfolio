@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./Card.module.css";
-import commonClasses from "../../utils/common.module.css"
+import commonClasses from "../UI/common.module.css"
 
 const Card = (props) => {
 	return (

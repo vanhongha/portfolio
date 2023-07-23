@@ -2,7 +2,7 @@ import React from "react";
 import ThreeDot from "../UI/ThreeDot";
 
 import classes from "./Header.module.css";
-import commonClasses from "../../utils/common.module.css"
+import commonClasses from "../UI/common.module.css"
 
 const Header = () => {
 	return(

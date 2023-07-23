@@ -3,11 +3,12 @@ import Card from "../UI/Card";
 import ThreeDot from "../UI/ThreeDot";
 
 import classes from "./AboutCard.module.css";
+import commonClasses from "../UI/common.module.css"
 
 const AboutCard = (props) => {
 	const clearFix = props.clearfix??false;
 	return (
-		<Card className={`${classes["about-card"]} ${classes[`${props.className}`]} ${clearFix ? classes.clearfix : ""}`}>
+		<Card className={`${classes["about-card"]} ${classes[`${props.className}`]} ${clearFix ? commonClasses.clearfix : ""}`}>
 			<div className={classes.header}>
 				<ThreeDot className={classes["three-dot-left"]} />
 				<div className={classes["title-right"]}>
