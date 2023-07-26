@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "../UI/Card";
 import Title from "../UI/Title";
+import SkillTag from "./SkillTag";
 
 import classes from "./Skills.module.css"
-import SkillTag from "./SkillTag";
+import commonClasses from "../UI/common.module.css"
 
 const PROGRAMMING_LANGUAGES = [
 	"Javascript",
@@ -34,7 +35,7 @@ const OTHERS = [
 
 const Skills = () => {
 	return (
-		<div style={{marginTop:50}}>
+		<div className={`${classes.skills} ${commonClasses.clearfix}`}>
 			<Card className={classes["skills-content-card"]}>
 				<div className={classes["left-panel"]}></div>
 				<div className={classes["skills-content"]}>
