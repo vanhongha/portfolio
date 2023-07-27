@@ -1,10 +1,12 @@
 import React, {useEffect} from "react";
+import ReactDOM from "react-dom";
+
 import Title from "../UI/Title";
 import ExperienceCard from "./ExperienceCard";
 
-import classes from "./Experiences.module.css";
 import background from "../../assets/BG-exp.png";
-import ReactDOM from "react-dom";
+
+import classes from "./Experiences.module.css";
 
 const EXPERIENCES = [
 	{
@@ -50,7 +52,6 @@ const Experiences = () => {
 	const root = document.getElementById("root");
 
 	useEffect(() => {
-		console.log(EXPERIENCES[0].id)
 		const exp_element = document.getElementById("experiences");
 		const anchor_element = document.getElementById(EXPERIENCES[0].id);
 		const exp_bg = document.getElementById("experiences-bg");

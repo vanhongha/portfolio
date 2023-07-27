@@ -4,10 +4,10 @@
 }
 
 .background{
-	height: 650px;
 	position: absolute;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: bottom;
+	background-position: center;
+	background-size: cover;
 }

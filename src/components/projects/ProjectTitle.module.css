@@ -1,0 +1,10 @@
+.title{
+	font-weight: bold;
+	font-size: 23pt;
+	color: #3852e7;
+	position: relative;
+	top: 25%;
+	z-index: 1;
+	float: left;
+	left: 40px;
+}
