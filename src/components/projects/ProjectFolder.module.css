@@ -9,6 +9,14 @@
 	margin-bottom: 40px;
 }
 
+.project-folder.folder{
+	background-image: var(--url1);
+}
+
+.project-folder.hover{
+	background-image: var(--url2);
+}
+
 .see-more{
 	position: absolute;
 	cursor: pointer;

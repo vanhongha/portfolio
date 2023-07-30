@@ -4,15 +4,15 @@ import {faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
 
 import ProjectTitle from "./ProjectTitle";
 
-import folder from "../../assets/folder.png";
-
 import classes from "./ProjectFolder.module.css";
 
 const ProjectFolder = (props) => {
 	return (
-		<div className={classes["project-folder"]} style={{backgroundImage: `url(${folder})`}}>
+		<div className={`${classes["project-folder"]} project-folder`} style={{'--url1': `url(${props.folder})`, '--url2': `url(${props.folder_hover})`}}>
 			<ProjectTitle title={props.project.name}/>
-			<span className={classes["see-more"]}>See more <FontAwesomeIcon size={"sm"} icon={faArrowUpRightFromSquare}/></span>
+			<span className={`${classes["see-more"]} see-more`}>
+				See more <FontAwesomeIcon size={"sm"} icon={faArrowUpRightFromSquare}/>
+			</span>
 		</div>
 	);
 }
