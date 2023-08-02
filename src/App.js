@@ -16,7 +16,6 @@ function App() {
 			<Skills/>
 			<Experiences/>
 			<Projects/>
-			<ProjectModal/>
 		</div>
 	);
 }
