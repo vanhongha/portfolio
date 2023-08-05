@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faIdCardClip, faBriefcase, faLocationDot, faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,7 @@ import background from "../../assets/BG.png"
 import AboutCard from "./AboutCard";
 
 const AboutBG = () => {
-	return (<div className={classes.background} style={{backgroundImage: `url(${background})`}}></div>);
+	return (<div className={classes.background} id={"about-background"} style={{backgroundImage: `url(${background})`}}></div>);
 }
 
 const About = () => {
@@ -58,21 +58,30 @@ const About = () => {
 			</p></div>
 	);
 
+	useEffect(() => {
+		const aboutMe = document.getElementById("about-me");
+		const bg = document.getElementById("about-background");
+		bg.style.height = (aboutMe.offsetTop + 110 + aboutMe.offsetHeight / 2) + "px";
+	});
+
 	return (
 		<div className={classes.container}>
 			{ReactDOM.createPortal(<AboutBG/>, root)}
 			<AboutCard
-				className={"info"}
+				id={"info"}
+				className={classes.info}
 				cardTitle={"Info"}
 				data={infoData}
 			/>
 			<AboutCard
-				className={"contact"}
+				id={"contact"}
+				className={classes.contact}
 				cardTitle={"Contact"}
 				data={contactData}
 			/>
 			<AboutCard
-				className={"about-me"}
+				id={"about-me"}
+				className={classes["about-me"]}
 				cardTitle={"About me"}
 				clearfix={true}
 				data={aboutMeData}

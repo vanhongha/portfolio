@@ -14,23 +14,6 @@
 	padding-bottom: 20px;
 }
 
-.about-card.info{
-	width: 350px;
-	top: 160px;
-}
-
-.about-card.contact{
-	width: 350px;
-	top: 145px;
-	margin-left: 120px;
-}
-
-.about-card.about-me{
-	width: 550px;
-	top: -200px;
-	float: right;
-}
-
 .three-dot-left{
 	float: left;
 	margin: 0;

@@ -5,17 +5,16 @@ import Education from "./components/education/Education";
 import Skills from "./components/skills/Skills";
 import Experiences from "./components/experiences/Experiences";
 import Projects from "./components/projects/Projects";
-import ProjectModal from "./components/projects/modal/ProjectModal";
 
 function App() {
 	return (
 		<div className={"App"}>
 			<Header/>
 			<About/>
-			<Education/>
-			<Skills/>
-			<Experiences/>
-			<Projects/>
+			{/*<Education/>*/}
+			{/*<Skills/>*/}
+			{/*<Experiences/>*/}
+			{/*<Projects/>*/}
 		</div>
 	);
 }
