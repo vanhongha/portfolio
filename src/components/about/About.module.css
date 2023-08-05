@@ -1,5 +1,4 @@
 .background{
-	height: 650px;
 	position: absolute;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -8,7 +7,57 @@
 	background-size: cover;
 }
 
-.container{
-	position: relative;
-	height: 686px;
+.about-text{
+	font-size: 16pt;
+	padding: 0 50px;
+	text-align: left;
 }
+
+@media only screen and (min-width: 1281px){
+	.background{
+		height: 650px;
+	}
+
+	.info{
+		width: 350px;
+		top: 160px;
+	}
+
+	.contact{
+		width: 350px;
+		top: 145px;
+		margin-left: 120px;
+	}
+
+	.about-me{
+		width: 550px;
+		top: -200px;
+		float: right;
+	}
+
+	.container{
+		position: relative;
+		height: 686px;
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.info{
+		margin-top: 90px;
+	}
+
+	.contact{
+		margin-top: 20px;
+	}
+
+	.about-me{
+		margin-top: 20px;
+	}
+
+	.container{
+		position: relative;
+		height: 100%;
+	}
+}
+
+

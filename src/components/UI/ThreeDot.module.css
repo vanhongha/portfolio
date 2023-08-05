@@ -22,3 +22,12 @@ li.dot{
 .grey{
 	background-color: #edfafc;
 }
+
+@media only screen and (max-width: 1280px) {
+	li.dot{
+		height: 15px;
+		width: 15px;
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+}

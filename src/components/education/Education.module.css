@@ -1,32 +1,8 @@
-.title{
-	padding-left: 20px;
-}
-
-.education{
-	position: relative;
-	margin-top: 100px;
-	padding: 99px 10px;
-}
-
-.university{
-	position: absolute;
-	text-align: center;
-	padding-left: 60px;
-	height: 100%;
-	background-color: #3d5afe;
-	top: 0;
-	right: 0;
-	border-radius: 100px;
-	width: calc(100% - 570px);
-	color: #ffffff;
-}
-
 .period{
 	line-height: 45px;
 }
 
 .university-name{
-	font-size: 60px;
 	font-weight: bolder;
 	line-height: 53px;
 }
@@ -41,20 +17,9 @@
 	line-height: 45px;
 }
 
-.vertical-center {
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.middle{
-	position: absolute;
-	width: 100%;
-	left: 50%;
-	top: 50%;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+.university{
+	background-color: #3d5afe;
+	color: #ffffff;
 }
 
 .middle a{
@@ -64,4 +29,76 @@
 
 .middle a:hover{
 	text-decoration: underline;
+}
+
+@media only screen and (min-width: 1281px){
+	.title{
+		padding-left: 20px;
+	}
+
+	.education{
+		position: relative;
+		margin-top: 50px;
+		padding: 99px 10px;
+		border-radius: 100px;
+	}
+
+	.university{
+		position: absolute;
+		text-align: center;
+		padding-left: 60px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		border-radius: 100px;
+		width: calc(100% - 570px);
+	}
+
+	.university-name{
+		font-size: 50pt;
+	}
+
+	.university-name-sub{
+		line-height: 40px;
+	}
+
+	.vertical-center {
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.middle{
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		top: 50%;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.title{
+		margin-bottom: 10px;
+	}
+
+	.education{
+		position: relative;
+		margin-top: 40px;
+		padding-top: 10px;
+	}
+
+	.university-name{
+		font-size: 30pt;
+	}
+
+	.university-name-sub{
+		line-height: 20px;
+	}
+
+	.university{
+		box-shadow: none;
+	}
 }

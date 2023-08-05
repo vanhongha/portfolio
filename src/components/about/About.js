@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faIdCardClip, faBriefcase, faLocationDot, faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,7 @@ import background from "../../assets/BG.png"
 import AboutCard from "./AboutCard";
 
 const AboutBG = () => {
-	return (<div className={classes.background} style={{backgroundImage: `url(${background})`}}></div>);
+	return (<div className={classes.background} id={"about-background"} style={{backgroundImage: `url(${background})`}}></div>);
 }
 
 const About = () => {
@@ -18,13 +18,15 @@ const About = () => {
 
 	const infoData = (
 		<div style={{textAlign: "left", padding: "0 30px"}}>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faIdCardClip}/><h2
-				style={{display: "contents"}}> Van,
-				Hong Ha</h2></div>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faBriefcase}/><h2
-				style={{display: "contents"}}> Software Engineer</h2></div>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faLocationDot}/><h2
-				style={{display: "contents"}}> &nbsp;Chiba, Japan</h2></div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faIdCardClip}/>
+				<h2 style={{display: "contents"}}> Van, Hong Ha</h2>
+			</div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faBriefcase}/>
+				<h2 style={{display: "contents"}}> Software Engineer</h2>
+			</div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faLocationDot}/>
+				<h2 style={{display: "contents"}}> &nbsp;Chiba, Japan</h2>
+			</div>
 		</div>
 	);
 
@@ -43,7 +45,7 @@ const About = () => {
 	);
 
 	const aboutMeData = (
-		<div style={{fontSize: "1.5em", padding: "0 50px", textAlign: "left"}}>
+		<div className={classes["about-text"]}>
 			<p>
 				I am a backend software engineer with a
 				passion for continual self-development
@@ -58,21 +60,30 @@ const About = () => {
 			</p></div>
 	);
 
+	useEffect(() => {
+		const aboutMe = document.getElementById("about-me");
+		const bg = document.getElementById("about-background");
+		bg.style.height = (aboutMe.offsetTop + 110 + aboutMe.offsetHeight / 2) + "px";
+	});
+
 	return (
 		<div className={classes.container}>
 			{ReactDOM.createPortal(<AboutBG/>, root)}
 			<AboutCard
-				className={"info"}
+				id={"info"}
+				className={classes.info}
 				cardTitle={"Info"}
 				data={infoData}
 			/>
 			<AboutCard
-				className={"contact"}
+				id={"contact"}
+				className={classes.contact}
 				cardTitle={"Contact"}
 				data={contactData}
 			/>
 			<AboutCard
-				className={"about-me"}
+				id={"about-me"}
+				className={classes["about-me"]}
 				cardTitle={"About me"}
 				clearfix={true}
 				data={aboutMeData}

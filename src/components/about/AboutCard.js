@@ -8,7 +8,7 @@ import commonClasses from "../UI/common.module.css"
 const AboutCard = (props) => {
 	const clearFix = props.clearfix??false;
 	return (
-		<Card className={`${classes["about-card"]} ${classes[`${props.className}`]} ${clearFix ? commonClasses.clearfix : ""}`}>
+		<Card className={`${classes["about-card"]} ${props.className} ${clearFix ? commonClasses.clearfix : ""}`} id={props.id}>
 			<div className={classes.header}>
 				<ThreeDot className={classes["three-dot-left"]} />
 				<div className={classes["title-right"]}>
