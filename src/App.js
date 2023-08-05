@@ -13,7 +13,7 @@ function App() {
 			<About/>
 			<Education/>
 			<Skills/>
-			{/*<Experiences/>*/}
+			<Experiences/>
 			{/*<Projects/>*/}
 		</div>
 	);

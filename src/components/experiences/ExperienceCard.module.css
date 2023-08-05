@@ -1,13 +1,5 @@
 .experience-card{
 	background: rgba(255, 255, 255, 0.5);
-	margin-bottom: 50px;
-}
-
-.experience-card-main{
-	margin: auto;
-	width: 60%;
-	min-width: 684px;
-	padding: 20px;
 }
 
 .three-dot{
@@ -24,4 +16,34 @@
 	text-align: left;
 	padding-left: 30px;
 	padding-right: 10px;
+}
+
+@media only screen and (min-width: 1281px){
+	.experience-card-main{
+		margin: auto;
+		width: 60%;
+		min-width: 684px;
+		padding: 20px;
+	}
+
+	.experience-card:not(:last-child){
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.experience-card-main{
+		margin: auto;
+		width: 70%;
+		padding: 20px;
+	}
+
+	.experience-card-main table td{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.experience-card:not(:last-child){
+		margin-bottom: 25px;
+	}
 }

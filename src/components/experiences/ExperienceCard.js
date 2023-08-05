@@ -8,10 +8,11 @@ import ThreeDot from "../UI/ThreeDot";
 
 const ExperienceCard = (props) => {
 	const rows = [];
-	for (var i = 0; i < Math.ceil(props.experience.descriptions.length / 2); i++) {
+	const colCount = window.innerWidth > 1280 ? 2 : 1;
+	for (var i = 0; i < Math.ceil(props.experience.descriptions.length / colCount); i++) {
 		let row = [];
-		for (var j = 0; j < 2; j++) {
-			const col_element = <span>{props.experience.descriptions[i * 2 + j]}</span>
+		for (var j = 0; j < colCount; j++) {
+			const col_element = <span>{props.experience.descriptions[i * colCount + j]}</span>
 			row.push(col_element);
 		}
 		rows.push(row);

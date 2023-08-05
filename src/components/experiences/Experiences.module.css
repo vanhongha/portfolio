@@ -11,3 +11,9 @@
 	background-position: center;
 	background-size: cover;
 }
+
+@media only screen and (max-width: 1280px){
+	.experiences{
+		margin-top: 40px;
+	}
+}
