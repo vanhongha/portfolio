@@ -18,13 +18,15 @@ const About = () => {
 
 	const infoData = (
 		<div style={{textAlign: "left", padding: "0 30px"}}>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faIdCardClip}/><h2
-				style={{display: "contents"}}> Van,
-				Hong Ha</h2></div>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faBriefcase}/><h2
-				style={{display: "contents"}}> Software Engineer</h2></div>
-			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faLocationDot}/><h2
-				style={{display: "contents"}}> &nbsp;Chiba, Japan</h2></div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faIdCardClip}/>
+				<h2 style={{display: "contents"}}> Van, Hong Ha</h2>
+			</div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faBriefcase}/>
+				<h2 style={{display: "contents"}}> Software Engineer</h2>
+			</div>
+			<div style={{padding: "7px 0"}}><FontAwesomeIcon size={"lg"} icon={faLocationDot}/>
+				<h2 style={{display: "contents"}}> &nbsp;Chiba, Japan</h2>
+			</div>
 		</div>
 	);
 
@@ -43,7 +45,7 @@ const About = () => {
 	);
 
 	const aboutMeData = (
-		<div style={{fontSize: "1.5em", padding: "0 50px", textAlign: "left"}}>
+		<div className={classes["about-text"]}>
 			<p>
 				I am a backend software engineer with a
 				passion for continual self-development
