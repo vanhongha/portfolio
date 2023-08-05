@@ -99,7 +99,7 @@ const Projects = () => {
 	});
 
 	return (
-		<div>
+		<div className={classes.projects}>
 			{openModal &&
 				<ProjectModal
 					selectingIndex={projectIndex}
