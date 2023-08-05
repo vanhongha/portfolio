@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Card from "../UI/Card";
 import Title from "../UI/Title";
 import SkillTag from "./SkillTag";
@@ -34,6 +34,15 @@ const OTHERS = [
 ]
 
 const Skills = () => {
+	useEffect(() => {
+		const skillsTextCard = document.getElementsByClassName(classes["skills-text-card"])[0];
+		const skillsContentCard = document.getElementsByClassName(classes["skills-content-card"])[0];
+		const leftPanel = document.getElementsByClassName(classes["left-panel"])[0];
+
+		skillsTextCard.style.height = skillsContentCard.offsetHeight + "px";
+		leftPanel.style.height = skillsContentCard.offsetHeight + "px";
+	});
+
 	return (
 		<div className={`${classes.skills} ${commonClasses.clearfix}`}>
 			<Card className={classes["skills-content-card"]}>

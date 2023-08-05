@@ -12,7 +12,7 @@ function App() {
 			<Header/>
 			<About/>
 			<Education/>
-			{/*<Skills/>*/}
+			<Skills/>
 			{/*<Experiences/>*/}
 			{/*<Projects/>*/}
 		</div>
