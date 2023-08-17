@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ThreeDot from "../UI/ThreeDot";
 
 import classes from "./Header.module.css";
@@ -10,6 +10,7 @@ const scrollInto = (id) => {
 	});
 }
 
+
 const Header = () => {
 	const [openMenu, setOpenMenu] = useState(false);
 
@@ -17,10 +18,31 @@ const Header = () => {
 		setOpenMenu((state) => !state)
 	}
 
+
+
+	useEffect(() => {
+		const header = document.getElementById('header');
+		window.addEventListener('scroll', () => {
+			if (document.documentElement.scrollTop > 70) {
+				header.style.width = 100 + "%";
+				header.style.maxWidth = 100 + "%";
+				header.style.height = 77 + "px";
+				header.style.marginTop = 0;
+				header.style.borderRadius = 0;
+			}else{
+				header.style.width = 80 + "%";
+				header.style.maxWidth = 1250 + "px";
+				header.style.height = 57 + "px";
+				header.style.marginTop = 22 + "px";
+				header.style.borderRadius = 50 + "px";
+			}
+		});
+	})
+
 	return (
 		<>
 			<header>
-				<div className={`${classes.desktop} ${commonClasses.shadow}`}>
+				<div id={"header"} className={`${classes.desktop} ${commonClasses.shadow}`}>
 					<ThreeDot className={classes["header-left"]}/>
 					<ul className={classes["header-right"]}>
 						<li className={classes.menu}>

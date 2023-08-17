@@ -37,7 +37,7 @@
 @media only screen and (min-width: 1281px){
 	.skills{
 		margin-top: 50px;
-		scroll-margin: 20px;
+		scroll-margin: 100px;
 	}
 
 	.skills-text-card{
