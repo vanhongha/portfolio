@@ -9,6 +9,8 @@ import {faLeftLong, faRightLong} from '@fortawesome/free-solid-svg-icons'
 import classes from "./ProjectModal.module.css";
 import commonClasses from "../../UI/common.module.css";
 
+import "./ProjectModalAnimation.css";
+
 const ModalOverlay = (props) => {
 	const project_num = props.projects.length;
 	const current_project_photos = props.projects[props.selectingIndex].photos;
@@ -68,11 +70,11 @@ const ModalOverlay = (props) => {
 						 draggable={"false"}
 						 src={current_project_photos[0]} alt="Image"/>}
 				<div className={classes.text}>
-					<p>
+					<p className={classes.description}>
 						This is my personal portfolio website showcasing my skills and projects. It was built using HTML, CSS, and JavaScript.
 					</p>
-					<p>
-						This is what I did in this project:
+					<p className={classes["what-i-did"]}>
+						What I did in this project:
 					</p>
 					<ul>
 						{current_project.descriptions.map((des, index) => {

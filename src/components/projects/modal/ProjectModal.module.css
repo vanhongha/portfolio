@@ -32,10 +32,23 @@
 .modal .body{
 	height: calc(100% - 60px);
 }
+
 .modal .body .text {
 	padding: 20px;
 	overflow: auto;
 	max-height: calc(100% - 300px - 70px);
+}
+
+.modal .body .text>.description {
+	color: #3852e7;
+	font-weight: bold;
+}
+
+.modal .body .text>.what-i-did {
+	font-weight: bold;
+}
+.modal .body .text li{
+	line-height: 34px;
 }
 
 .modal-image {
