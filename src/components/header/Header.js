@@ -14,7 +14,7 @@ const Header = () => {
 	const [openMenu, setOpenMenu] = useState(false);
 
 	const onToggleMenu = (e) => {
-		setOpenMenu(e.target.checked);
+		setOpenMenu((state) => !state)
 	}
 
 	return (
@@ -51,7 +51,7 @@ const Header = () => {
 					</ul>
 				</div>
 				<div className={`${classes["top-nav"]} ${classes.mobile} ${commonClasses.shadow}`}>
-					<input id={classes["menu-toggle"]} type="checkbox" onChange={onToggleMenu}/>
+					<input id={classes["menu-toggle"]} type="checkbox" onChange={onToggleMenu} checked={openMenu}/>
 					<label className={classes["menu-button-container"]} htmlFor={classes["menu-toggle"]}>
 						<div className={classes["menu-button"]}></div>
 					</label>
