@@ -9,12 +9,7 @@
 }
 
 .modal {
-	width: 50%;
-	height: 70%;
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	background-color: white;
 	padding: 1rem;
 	border-radius: 14px;
@@ -23,23 +18,29 @@
 	animation: slide-down 300ms ease-out forwards;
 }
 
-.modal .header{
+.modal .header {
 	height: 60px;
 	width: 100%;
 	text-align: center;
 }
 
-.modal .header .project-title{
+.modal .header .project-title {
 	position: inherit;
 	float: initial;
 }
 
-.modal .body .text{
+.modal .body{
+	height: calc(100% - 60px);
+}
+.modal .body .text {
 	padding: 20px;
+	overflow: auto;
+	max-height: calc(100% - 300px - 70px);
 }
 
 .modal-image {
 	width: auto;
+	max-width: 100%;
 	height: 300px;
 	object-fit: cover;
 	border-radius: 8px;
@@ -62,7 +63,7 @@ button.close {
 	right: 16px;
 }
 
-footer{
+footer {
 	position: absolute;
 	width: 100%;
 	bottom: 20px;
@@ -85,32 +86,56 @@ footer{
 	background: currentColor;
 	opacity: .2;
 	transition: transform 100ms ease-out, opacity 150ms linear;
+
 	&.active {
 		opacity: .7;
 		box-shadow: 0 0 1em -.25em;
 	}
+
 	&:hover {
 		transform: scale(1.2)
 	}
 }
 
-.actions{
+.actions {
 	position: absolute;
 	width: 100%;
 }
 
-.actions button{
+.actions button {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 }
 
-.back-action{
+.back-action {
 	margin-left: 50px;
 	float: left;
 }
 
-.forward-action{
+.forward-action {
 	float: right;
 	margin-right: 50px;
+}
+
+
+@media only screen and (min-width: 1281px) {
+	.modal {
+		width: 700px;
+		height: 800px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.modal {
+		margin-top: 75px;
+		top: 0;
+		width: 90%;
+		height: calc(90% - 62px);
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 }

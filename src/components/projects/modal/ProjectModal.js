@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactModal from 'react-modal';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import ProjectTitle from "../ProjectTitle";
@@ -8,10 +8,6 @@ import {faLeftLong, faRightLong} from '@fortawesome/free-solid-svg-icons'
 
 import classes from "./ProjectModal.module.css";
 import commonClasses from "../../UI/common.module.css";
-
-const Backdrop = ({onClick}) => {
-	return <div onClick={onClick} className={classes.backdrop}></div>;
-}
 
 const ModalOverlay = (props) => {
 	const project_num = props.projects.length;
@@ -45,7 +41,21 @@ const ModalOverlay = (props) => {
 	}
 
 	return (
-		<div className={classes.modal}>
+		<ReactModal
+			className={classes.modal}
+			isOpen={props.isOpen}
+			style={{
+				overlay: {
+					backgroundColor: 'rgba(0, 0, 0, 0.75)'
+				},
+			}}
+			onRequestClose={() => {
+				props.onClickClose();
+			}}
+			shouldCloseOnOverlayClick={true}
+			preventScroll={true}
+			backdrop={"static"}
+		>
 			<div className={classes.header}>
 				<ProjectTitle
 					className={`${classes["project-title"]} ${commonClasses.clearfix}`}
@@ -86,22 +96,22 @@ const ModalOverlay = (props) => {
 					{dots.map(dot => dot)}
 				</div>
 			</footer>
-		</div>
+		</ReactModal>
 	);
 }
 
-const portalElement = document.getElementById("overlays");
+ReactModal.setAppElement("#overlays");
 
 const ProjectModal = (props) => {
 	return (
 		<>
-			{ReactDOM.createPortal(<Backdrop onClick={props.onCloseModal}/>, portalElement)}
-			{ReactDOM.createPortal(<ModalOverlay
+			<ModalOverlay
 				onClickClose={props.onCloseModal}
 				selectingIndex={props.selectingIndex}
 				projects={props.projects}
 				setProjectIndex={props.setProjectIndex}
-			/>, portalElement)}
+				isOpen={props.isOpen}
+			/>
 		</>
 	);
 }

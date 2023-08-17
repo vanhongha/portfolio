@@ -69,6 +69,7 @@ const Projects = () => {
 
 	const closeModalHander = () => {
 		setOpenModal(false);
+		document.body.style.overflow = 'unset';
 	}
 
 	const setProjectIndexHandler = (value) => {
@@ -82,6 +83,7 @@ const Projects = () => {
 			const see_more = f.querySelector(".see-more");
 			see_more.addEventListener("click", (event) => {
 				setOpenModal(true);
+				document.body.style.overflow = 'hidden';
 				let index = event.target.closest('.project-folder').id.split('-')[1];
 				setProjectIndex(index);
 			});
@@ -100,13 +102,13 @@ const Projects = () => {
 
 	return (
 		<div id={"projects"} className={classes.projects}>
-			{openModal &&
-				<ProjectModal
-					selectingIndex={projectIndex}
-					onCloseModal={closeModalHander}
-					projects={PROJECTS}
-					setProjectIndex={setProjectIndexHandler}
-				/>}
+			<ProjectModal
+				selectingIndex={projectIndex}
+				onCloseModal={closeModalHander}
+				projects={PROJECTS}
+				setProjectIndex={setProjectIndexHandler}
+				isOpen={openModal}
+			/>
 			<Title>PROJECTS</Title>
 			<div className={classes.content}>
 				{PROJECTS.map((project, index) => {
