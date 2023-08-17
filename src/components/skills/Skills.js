@@ -23,14 +23,18 @@ const SKILLS = [
 const FRAMEWORKS = [
 	"Codeigniter",
 	"Laravel",
-	"React"
+	"React",
+	"PHP Library",
+	"JS Library",
 ]
 
 const OTHERS = [
 	"Git",
 	"MySQL",
 	"MongoDB",
-	"MSSQL"
+	"MSSQL",
+	"OOP",
+	"Data structures and Algorithms",
 ]
 
 const Skills = () => {
@@ -44,7 +48,7 @@ const Skills = () => {
 	});
 
 	return (
-		<div className={`${classes.skills} ${commonClasses.clearfix}`}>
+		<div id={"skills"} className={`${classes.skills} ${commonClasses.clearfix}`}>
 			<Card className={classes["skills-content-card"]}>
 				<div className={classes["left-panel"]}></div>
 				<div className={classes["skills-content"]}>
@@ -61,7 +65,7 @@ const Skills = () => {
 						})}
 					</div>
 					<div>
-						<span className={classes["skills-title"]}>Frameworks</span><br/>
+						<span className={classes["skills-title"]}>Frameworks and Libraries</span><br/>
 						{FRAMEWORKS.map(frw => {
 							return <SkillTag key={frw} tag={frw} />;
 						})}

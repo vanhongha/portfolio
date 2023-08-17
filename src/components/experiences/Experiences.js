@@ -15,9 +15,13 @@ const EXPERIENCES = [
 		company_name: "Imba Games",
 		title: "Game Developer",
 		descriptions: [
-			"Developed mobile games with Unity(C#)",
-			"Optimised the game's performance by using the Design Pattern",
+			"Developed mobile games with Unity",
+			"Developed Object-oriented code in C#",
+			"Optimized the game's performance by using the Design Pattern",
 			"Developed game's server-side using Node.js"
+		],
+		keywords :[
+			"Unity", "C#", "Javascript","Node.js", "MongoDB"
 		]
 	},
 	{
@@ -26,9 +30,14 @@ const EXPERIENCES = [
 		company_name: "IB System Co., Ltd",
 		title: "System Engineer",
 		descriptions: [
-			"Developed Web Applications with PHP, Javascript",
-			"Optimised the game's performance by using the Design Pattern",
-			"Developed game's server-side using Node.js"
+			"Developed web system provides services for kindergartens",
+			"Translated designs and wireframes into high-quality code using HTML, CSS, and Javascript",
+			"Received and solved requests for building new services or functions",
+			"Used PHP or Javascript's libraries for making new functions",
+			"Optimized duplicated fetched data by using dynamic programming"
+		],
+		keywords :[
+			"Codeigniter", "PHP", "MySQL", "Javascript"
 		]
 	},
 	{
@@ -37,9 +46,12 @@ const EXPERIENCES = [
 		company_name: "Rikkeisoft",
 		title: "System Engineer",
 		descriptions: [
-			"Developed mobile games with Unity(C#)",
-			"Optimised the game's performance by using the Design Pattern",
-			"Developed game's server-side using Node.js"
+			"Following members' task progress",
+			"Participating in fixing bugs",
+			"Preparing "
+		],
+		keywords :[
+			"BrSE", "Java", "Spring Framework"
 		]
 	}
 ]

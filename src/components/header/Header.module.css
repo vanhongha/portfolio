@@ -45,6 +45,7 @@
 header a {
 	background-color: transparent;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 header a:link,
@@ -162,6 +163,13 @@ header :active {
 		padding: 0.5em 0;
 		color: white;
 		background: linear-gradient(to left, #8845f4, #3d5afe);
+	}
+
+	header a,
+	header a:active,
+	header a:hover,
+	header a:focus{
+		color: white;
 	}
 }
 

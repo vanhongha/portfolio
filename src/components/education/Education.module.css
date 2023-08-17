@@ -41,6 +41,7 @@
 		margin-top: 50px;
 		padding: 99px 10px;
 		border-radius: 100px;
+		scroll-margin: 20px;
 	}
 
 	.university{
@@ -88,6 +89,7 @@
 		position: relative;
 		margin-top: 40px;
 		padding-top: 10px;
+		scroll-margin: 70px;
 	}
 
 	.university-name{

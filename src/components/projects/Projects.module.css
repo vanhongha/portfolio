@@ -12,4 +12,8 @@
 	.content{
 		justify-content: space-evenly;
 	}
+
+	.projects{
+		scroll-margin: 70px;
+	}
 }

@@ -32,14 +32,20 @@ const About = () => {
 
 	const contactData = (
 		<>
-			<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faEnvelope}/>
-			</div>
-			<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faSquareGithub}/>
-			</div>
-			<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faLinkedin}/>
-			</div>
+			<a href="" style={{color: "black"}}>
+				<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faEnvelope}/>
+				</div>
+			</a>
+			<a href="https://github.com/vanhongha" style={{color: "black"}}>
+				<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faSquareGithub}/>
+				</div>
+			</a>
+			<a href="https://www.linkedin.com/in/vhha1996/" style={{color: "black"}}>
+				<div style={{display: "inline-block", padding: "15px"}}><FontAwesomeIcon size={"4x"} icon={faLinkedin}/>
+				</div>
+			</a>
 			<div style={{textAlign: "right", paddingRight: 42}}>
-				<a href={""}>My resume is here >></a>
+				{/*<a href={""}>My resume is here >></a>*/}
 			</div>
 		</>
 	);
@@ -47,16 +53,14 @@ const About = () => {
 	const aboutMeData = (
 		<div className={classes["about-text"]}>
 			<p>
-				I am a backend software engineer with a
+				I am a system engineer with a
 				passion for continual self-development
 				and a desire to learn. I excel with backend
-				technologies such as Express.js, Django,
-				and GraphQL, and I have experience with
-				agile development methodologies and a
-				solid understanding of software
+				technologies such as Golang, Codeigniter, Laravel,
+				and Restful, and I have experience with
+				agile development methodologies and software
 				development lifecycles. I am also
-				multilingual in English, Japanese and
-				Korean.
+				multilingual in English and Japanese.
 			</p></div>
 	);
 
@@ -67,7 +71,7 @@ const About = () => {
 	});
 
 	return (
-		<div className={classes.container}>
+		<div id={"about"} className={classes.container}>
 			{ReactDOM.createPortal(<AboutBG/>, root)}
 			<AboutCard
 				id={"info"}

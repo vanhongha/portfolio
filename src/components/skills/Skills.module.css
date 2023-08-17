@@ -37,6 +37,7 @@
 @media only screen and (min-width: 1281px){
 	.skills{
 		margin-top: 50px;
+		scroll-margin: 20px;
 	}
 
 	.skills-text-card{
@@ -70,6 +71,7 @@
 @media only screen and (max-width: 1280px){
 	.skills{
 		margin-top: 40px;
+		scroll-margin: 70px;
 	}
 
 	.skills-text-card{

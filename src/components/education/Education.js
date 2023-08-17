@@ -7,7 +7,7 @@ import commonClasses from "../UI/common.module.css";
 
 const Education = () => {
 	return (
-		<Card className={`${classes.education} ${commonClasses.clearfix}`}>
+		<Card id={"education"} className={`${classes.education} ${commonClasses.clearfix}`}>
 			<Title className={`${classes["vertical-center"]} ${classes.title}`}>
 				EDUCATION
 			</Title>
