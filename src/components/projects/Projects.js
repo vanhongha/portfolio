@@ -15,6 +15,7 @@ import img_iah_2 from "../../assets/projects_imgs/iah_2.jpeg";
 import img_cmn_1 from "../../assets/projects_imgs/cmn_1.jpg";
 import img_cmn_2 from "../../assets/projects_imgs/cmn_2.png";
 import img_t3x from "../../assets/projects_imgs/t3x.png";
+import {useDispatch, useSelector} from "react-redux";
 
 const PROJECTS = [
 	{
@@ -64,12 +65,12 @@ const PROJECTS = [
 ]
 
 const Projects = () => {
-	const [openModal, setOpenModal] = useState(false);
+	const dispatch = useDispatch();
+	const openModal = useSelector(state => state.openModal);
 	const [projectIndex, setProjectIndex] = useState(0);
 
 	const closeModalHander = () => {
-		setOpenModal(false);
-		document.body.style.overflow = 'unset';
+		dispatch({type: "CLOSE_MODAL"});
 	}
 
 	const setProjectIndexHandler = (value) => {
@@ -82,8 +83,7 @@ const Projects = () => {
 			f.classList.add(classesFolder.folder);
 			const see_more = f.querySelector(".see-more");
 			see_more.addEventListener("click", (event) => {
-				setOpenModal(true);
-				document.body.style.overflow = 'hidden';
+				dispatch({type: "OPEN_MODAL"});
 				let index = event.target.closest('.project-folder').id.split('-')[1];
 				setProjectIndex(index);
 			});

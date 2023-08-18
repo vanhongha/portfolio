@@ -1,24 +1,29 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+
 import ThreeDot from "../UI/ThreeDot";
 
 import classes from "./Header.module.css";
 import commonClasses from "../UI/common.module.css"
 
-const scrollInto = (id) => {
+const scrollInto = (id, closeModal) => {
+	closeModal();
 	document.getElementById(id)?.scrollIntoView({
 		behavior: 'smooth'
 	});
 }
 
-
 const Header = () => {
-	const [openMenu, setOpenMenu] = useState(false);
+	const dispatch = useDispatch();
+	const openHeader = useSelector(state => state.openHeader);
 
 	const onToggleMenu = (e) => {
-		setOpenMenu((state) => !state)
+		dispatch({type: "TOGGLE_HEADER"});
 	}
 
-
+	const closeModal = () => {
+		dispatch({type: "CLOSE_MODAL"});
+	}
 
 	useEffect(() => {
 		const header = document.getElementById('header');
@@ -47,37 +52,37 @@ const Header = () => {
 					<ul className={classes["header-right"]}>
 						<li className={classes.menu}>
 							<a onClick={() => {
-								scrollInto("about");
+								scrollInto("about", closeModal);
 							}}>About</a>
 						</li>
 						<li className={classes.menu}>
 							<a onClick={() => {
-								scrollInto("education");
+								scrollInto("education", closeModal);
 							}}>Education</a>
 						</li>
 						<li className={classes.menu}>
 							<a onClick={() => {
-								scrollInto("skills");
+								scrollInto("skills", closeModal);
 							}}>Skills</a>
 						</li>
 						<li className={classes.menu}>
 							<a onClick={() => {
-								scrollInto("experiences");
+								scrollInto("experiences", closeModal);
 							}}>Experiences</a>
 						</li>
 						<li className={classes.menu}>
 							<a onClick={() => {
-								scrollInto("projects");
+								scrollInto("projects", closeModal);
 							}}>Projects</a>
 						</li>
 					</ul>
 				</div>
 				<div className={`${classes["top-nav"]} ${classes.mobile} ${commonClasses.shadow}`}>
-					<input id={classes["menu-toggle"]} type="checkbox" onChange={onToggleMenu} checked={openMenu}/>
+					<input id={classes["menu-toggle"]} type="checkbox" onChange={onToggleMenu} checked={openHeader}/>
 					<label className={classes["menu-button-container"]} htmlFor={classes["menu-toggle"]}>
 						<div className={classes["menu-button"]}></div>
 					</label>
-					<ul className={`${classes["menu-dropdown"]} ${openMenu ? classes.checked : classes.notchecked}`}>
+					<ul className={`${classes["menu-dropdown"]} ${openHeader ? classes.checked : classes.notchecked}`}>
 						<li>
 							<a onClick={(e) => {
 								scrollInto("about");
