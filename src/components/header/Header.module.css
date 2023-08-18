@@ -15,10 +15,17 @@
 		left: 0;
 		right: 0;
 		z-index: 1;
+		transition: 300ms;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	header .desktop>.content{
+		width: 1250px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		transition: 300ms;
 	}
 
 	header ul {

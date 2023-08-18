@@ -31,7 +31,7 @@ const Header = () => {
 			if (document.documentElement.scrollTop > 70) {
 				header.style.width = 100 + "%";
 				header.style.maxWidth = 100 + "%";
-				header.style.height = 77 + "px";
+				header.style.height = 79 + "px";
 				header.style.marginTop = 0;
 				header.style.borderRadius = 0;
 			}else{
@@ -48,34 +48,36 @@ const Header = () => {
 		<>
 			<header>
 				<div id={"header"} className={`${classes.desktop} ${commonClasses.shadow}`}>
-					<ThreeDot className={classes["header-left"]}/>
-					<ul className={classes["header-right"]}>
-						<li className={classes.menu}>
-							<a onClick={() => {
-								scrollInto("about", closeModal);
-							}}>About</a>
-						</li>
-						<li className={classes.menu}>
-							<a onClick={() => {
-								scrollInto("education", closeModal);
-							}}>Education</a>
-						</li>
-						<li className={classes.menu}>
-							<a onClick={() => {
-								scrollInto("skills", closeModal);
-							}}>Skills</a>
-						</li>
-						<li className={classes.menu}>
-							<a onClick={() => {
-								scrollInto("experiences", closeModal);
-							}}>Experiences</a>
-						</li>
-						<li className={classes.menu}>
-							<a onClick={() => {
-								scrollInto("projects", closeModal);
-							}}>Projects</a>
-						</li>
-					</ul>
+					<div className={classes.content}>
+						<ThreeDot className={classes["header-left"]}/>
+						<ul className={classes["header-right"]}>
+							<li className={classes.menu}>
+								<a onClick={() => {
+									scrollInto("about", closeModal);
+								}}>About</a>
+							</li>
+							<li className={classes.menu}>
+								<a onClick={() => {
+									scrollInto("education", closeModal);
+								}}>Education</a>
+							</li>
+							<li className={classes.menu}>
+								<a onClick={() => {
+									scrollInto("skills", closeModal);
+								}}>Skills</a>
+							</li>
+							<li className={classes.menu}>
+								<a onClick={() => {
+									scrollInto("experiences", closeModal);
+								}}>Experiences</a>
+							</li>
+							<li className={classes.menu}>
+								<a onClick={() => {
+									scrollInto("projects", closeModal);
+								}}>Projects</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div className={`${classes["top-nav"]} ${classes.mobile} ${commonClasses.shadow}`}>
 					<input id={classes["menu-toggle"]} type="checkbox" onChange={onToggleMenu} checked={openHeader}/>
@@ -85,31 +87,31 @@ const Header = () => {
 					<ul className={`${classes["menu-dropdown"]} ${openHeader ? classes.checked : classes.notchecked}`}>
 						<li>
 							<a onClick={(e) => {
-								scrollInto("about");
+								scrollInto("about", closeModal);
 								onToggleMenu(e);
 							}}>About</a>
 						</li>
 						<li>
 							<a onClick={(e) => {
-								scrollInto("education");
+								scrollInto("education", closeModal);
 								onToggleMenu(e);
 							}}>Education</a>
 						</li>
 						<li>
 							<a onClick={(e) => {
-								scrollInto("skills");
+								scrollInto("skills", closeModal);
 								onToggleMenu(e);
 							}}>Skills</a>
 						</li>
 						<li>
 							<a onClick={(e) => {
-								scrollInto("experiences");
+								scrollInto("experiences", closeModal);
 								onToggleMenu(e);
 							}}>Experiences</a>
 						</li>
 						<li>
 							<a onClick={(e) => {
-								scrollInto("projects");
+								scrollInto("projects", closeModal);
 								onToggleMenu(e);
 							}}>Projects</a>
 						</li>
