@@ -19,24 +19,14 @@ import {useDispatch, useSelector} from "react-redux";
 
 const PROJECTS = [
 	{
-		id: "fe",
-		name: "Flyer Editor",
-		descriptions: [
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-		],
-		photos: []
-	},
-	{
 		id: "time3",
 		name: "Time-3X",
 		descriptions: [
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
+			"This is web application used for manage time attendance",
+			"In charge of backend API and frontend development",
+			"Design documentation in order to preparation phase for development phase",
+			"Prepare the necessary documentation for the development phase",
+			"Java, Spring Boot, HTML, CSS, Javascript, Oracle",
 		],
 		photos: [img_t3x]
 	},
@@ -44,10 +34,11 @@ const PROJECTS = [
 		id: "cmn",
 		name: "コミュなび",
 		descriptions: [
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
+			"This is web application used for manage kindergarten",
+			"Develop new features and maintain system in order to reduce bugs and issues",
+			"In charge of backend API and frontend development",
+			"Create both general and specific documentation",
+			"PHP, Codeigniter, PHP Library, HTML, CSS, Javascript, Bootstrap, Javascript Library, JQuery, MySQL",
 		],
 		photos: [img_cmn_1, img_cmn_2]
 	},
@@ -55,10 +46,11 @@ const PROJECTS = [
 		id: "iah",
 		name: "I am Hero",
 		descriptions: [
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
-			"Improve your English skills in social situations",
+			"Engaging with UI as the front-end",
+			"Built a backend service to manage the game's items using microservice architecture",
+			"Worked with Google cloud service to develop notification system and game's events",
+			"Improved the game's performance",
+			"Unity, C#, Javascript, Node.js, MongoDB, GCS",
 		],
 		photos: [img_iah_1, img_iah_2]
 	},
