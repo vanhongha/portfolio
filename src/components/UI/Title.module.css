@@ -1,0 +1,19 @@
+.title{
+	color: #3852e7;
+	font-weight: bolder;
+	position: relative;
+	top: 0;
+	cursor: default;
+}
+
+@media only screen and (min-width: 1281px){
+	.title{
+		font-size: 60pt;
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.title{
+		font-size: 35pt;
+	}
+}

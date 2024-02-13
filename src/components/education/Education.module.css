@@ -1,0 +1,106 @@
+.period{
+	line-height: 45px;
+}
+
+.university-name{
+	font-weight: bolder;
+	line-height: 53px;
+}
+
+.university-name-sub{
+	font-size: large;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.major{
+	line-height: 45px;
+}
+
+.university{
+	background-color: #3d5afe;
+	color: #ffffff;
+}
+
+.middle a{
+	color: white;
+	text-decoration: none;
+}
+
+.middle a:hover{
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 1281px){
+	.title{
+		padding-left: 20px;
+	}
+
+	.education{
+		position: relative;
+		margin-top: 50px;
+		padding: 99px 10px;
+		border-radius: 100px;
+		scroll-margin: 100px;
+	}
+
+	.university{
+		position: absolute;
+		text-align: center;
+		padding-left: 60px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		border-radius: 100px;
+		width: calc(100% - 570px);
+	}
+
+	.university-name{
+		font-size: 50pt;
+	}
+
+	.university-name-sub{
+		line-height: 40px;
+	}
+
+	.vertical-center {
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.middle{
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		top: 50%;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.title{
+		margin-bottom: 10px;
+	}
+
+	.education{
+		position: relative;
+		margin-top: 40px;
+		padding-top: 10px;
+		scroll-margin: 70px;
+	}
+
+	.university-name{
+		font-size: 30pt;
+	}
+
+	.university-name-sub{
+		line-height: 20px;
+	}
+
+	.university{
+		box-shadow: none;
+	}
+}
